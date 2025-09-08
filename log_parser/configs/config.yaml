@@ -2,4 +2,4 @@ logging:
   save_logs: false
 
 api:
-  re_model_file_path: /home/helen/PycharmProjects/professional/log_parser/data/re_model.txt #log_parser/data/re_model.txt
+  re_model_file_path: log_parser/data/re_model.txt

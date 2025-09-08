@@ -8,7 +8,7 @@ from log_parser.main import app
 
 @pytest.fixture(autouse=True)
 def setup_env():
-    os.environ.setdefault('NGINX_FILE_PATH', './tests/test_log.log')
+    os.environ.setdefault('NGINX_FILE_PATH', 'tests/test_log.log')
     yield
     if 'NGINX_FILE_PATH' in os.environ:
         del os.environ['NGINX_FILE_PATH']

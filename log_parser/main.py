@@ -32,7 +32,7 @@ async def lifespan(app: FastAPI):
     middleware_deps = [
         Depends(auth(config.api.login, config.api.password)),
     ]
-    nginx_file_path = os.getenv('NGINX_FILE_PATH', '/home/helen/PycharmProjects/professional/log_parser/data/log.log')
+    nginx_file_path = os.getenv('NGINX_FILE_PATH', '/log_parser/data/log.log')
     if not nginx_file_path:
         error = f'Nginx file path was not set as an environment variable!'
         logger.error(error)

@@ -23,7 +23,7 @@ class Config(BaseModel):
 
 
 def load_config():
-    config_file = os.getenv('CONFIG_FILE', '/home/helen/PycharmProjects/professional/log_parser/configs/config.yaml') #'log_parser/configs/config.yaml')
+    config_file = os.getenv('CONFIG_FILE', 'log_parser/configs/config.yaml')
     with open(config_file, "r") as file:
         config = yaml.load(file, Loader=yaml.SafeLoader)
     logger.info('Config is loaded')

@@ -27,7 +27,7 @@ class LogParser:
                 int(data["response_time"]),
             )
         else:
-            logger.error(f"Failed to parse log line, wrong format")
+            logger.error("Failed to parse log line, wrong format")
 
     async def parse_logs(self) -> list:
         results = []

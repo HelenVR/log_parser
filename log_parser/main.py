@@ -34,15 +34,15 @@ async def lifespan(app: FastAPI):
     ]
     nginx_file_path = os.getenv("NGINX_FILE_PATH", "log_parser/data/log.log")
     if not nginx_file_path:
-        error = f"Nginx file path was not set as an environment variable!"
+        error = "Nginx file path was not set as an environment variable!"
         logger.error(error)
         raise Exception(error)
     app.state.log_parser = LogParser(nginx_file_path, config.api.re_model_file_path)
     app.include_router(metrics_handler.router, dependencies=middleware_deps)
     app.include_router(version_handler.router)
-    logger.info(f"--- Application start up completed ---")
+    logger.info("--- Application start up completed ---")
     yield
-    logger.info(f"--- Application has been shut down ---")
+    logger.info("--- Application has been shut down ---")
 
 
 app = FastAPI(lifespan=lifespan)
@@ -55,4 +55,4 @@ if __name__ == "__main__":
             port=int(os.getenv("API_PORT", "8040")),
         )
     except KeyboardInterrupt:
-        logger.info(f"Application will be stopped")
+        logger.info("Application will be stopped")

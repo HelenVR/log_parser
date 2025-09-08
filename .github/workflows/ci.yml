@@ -33,3 +33,13 @@ jobs:
     - name: Run tests
       run: |
         poetry run python -m pytest tests/test_router.py -v
+
+    - name: Build Docker image
+      run: |
+        chmod +x ./build.sh
+        ./build.sh
+
+    - name: Run Docker container
+      run: |
+        chmod +x ./run.sh
+        ./run.sh

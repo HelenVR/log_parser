@@ -7,7 +7,7 @@ security = HTTPBasic()
 
 def auth(login: str, password: str):
     if not (login and password):
-        raise Exception(f"Login and/or password are missing")
+        raise Exception("Login and/or password are missing")
 
     def auth_check(creds: HTTPBasicCredentials = Depends(security)):
         if not (creds.username == login and creds.password == password):

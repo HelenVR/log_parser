@@ -13,19 +13,27 @@ router = APIRouter(
 )
 
 
-@router.get('/get_metrics', status_code=200)
+@router.get("/get_metrics", status_code=200)
 async def get_logs(request: Request):
     log_parser: LogParser = request.app.state.log_parser
     try:
         nginx_data = await log_parser.parse_logs()
     except Exception as e:
-        error = f'Failed to parse nginx logs: {e.__class__.__name__}, {e}'
+        error = f"Failed to parse nginx logs: {e.__class__.__name__}, {e}"
         logger.error(error)
-        return ORJSONResponse(content=ApiErrorResponse(error=error, status=ApiResponseStatuses.failure.value))
+        return ORJSONResponse(
+            content=ApiErrorResponse(
+                error=error, status=ApiResponseStatuses.failure.value
+            )
+        )
     try:
         nginx_statistics = await log_parser.get_statistics(nginx_data)
         return ORJSONResponse(content=nginx_statistics)
     except Exception as e:
-        error = f'Failed to get nginx statistics: {e.__class__.__name__}, {e}'
+        error = f"Failed to get nginx statistics: {e.__class__.__name__}, {e}"
         logger.error(error)
-        return ORJSONResponse(content=ApiErrorResponse(error=error, status=ApiResponseStatuses.failure.value))
+        return ORJSONResponse(
+            content=ApiErrorResponse(
+                error=error, status=ApiResponseStatuses.failure.value
+            )
+        )

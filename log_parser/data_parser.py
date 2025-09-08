@@ -15,32 +15,38 @@ class LogParser:
         match = log_pattern.match(log_line)
         if match:
             data = match.groupdict()
-            return (data['ip'],
-                    data['datetime'],
-                    data['method'],
-                    data['path'],
-                    int(data['status']),
-                    int(data['size']),
-                    data['referer'],
-                    data['user_agent'],
-                    int(data['response_time']))
+            return (
+                data["ip"],
+                data["datetime"],
+                data["method"],
+                data["path"],
+                int(data["status"]),
+                int(data["size"]),
+                data["referer"],
+                data["user_agent"],
+                int(data["response_time"]),
+            )
         else:
-            logger.error(f'Failed to parse log line, wrong format')
+            logger.error(f"Failed to parse log line, wrong format")
 
     async def parse_logs(self) -> list:
         results = []
-        with open(self.log_file, 'r') as file:
+        with open(self.log_file, "r") as file:
             for line in file.readlines():
                 try:
                     data = await self.parse_line(line)
                     results.append(data)
                 except Exception as e:
-                    logger.error(f'Failed to parse log line: {e.__class__.__name__}, {e}')
+                    logger.error(
+                        f"Failed to parse log line: {e.__class__.__name__}, {e}"
+                    )
         return results
 
     async def get_statistics(self, data: list) -> dict:
         statuses = {i: [i[4] for i in data].count(i) for i in set([j[4] for j in data])}
-        endpoints = {i: [i[3] for i in data].count(i) for i in set([j[3] for j in data])}
+        endpoints = {
+            i: [i[3] for i in data].count(i) for i in set([j[3] for j in data])
+        }
         methods = {i: [i[2] for i in data].count(i) for i in set([j[2] for j in data])}
         ips = {i: [i[0] for i in data].count(i) for i in set([j[0] for j in data])}
         response_time_data = [i[-1] for i in data]
@@ -50,9 +56,6 @@ class LogParser:
             "median_time": statistics.median(response_time_data),
             "endpoints": endpoints,
             "ips": ips,
-            "methods": methods
+            "methods": methods,
         }
         return statistics_data
-
-
-

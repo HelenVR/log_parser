@@ -8,10 +8,10 @@ from log_parser.main import app
 
 @pytest.fixture(autouse=True)
 def setup_env():
-    os.environ.setdefault('NGINX_FILE_PATH', 'tests/test_log.log')
+    os.environ.setdefault("NGINX_FILE_PATH", "tests/test_log.log")
     yield
-    if 'NGINX_FILE_PATH' in os.environ:
-        del os.environ['NGINX_FILE_PATH']
+    if "NGINX_FILE_PATH" in os.environ:
+        del os.environ["NGINX_FILE_PATH"]
 
 
 @pytest.fixture(scope="session")
@@ -21,8 +21,12 @@ def client():
 
 
 def test_get_logs_with_real_file(client):
-    response = client.get("/api/v1/get_metrics", auth=BasicAuth(client.app.state.config.api.login,
-                                                                client.app.state.config.api.password))
+    response = client.get(
+        "/api/v1/get_metrics",
+        auth=BasicAuth(
+            client.app.state.config.api.login, client.app.state.config.api.password
+        ),
+    )
     assert response.status_code == 200
 
     data = response.json()

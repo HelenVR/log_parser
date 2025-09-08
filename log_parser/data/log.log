@@ -1,0 +1,30 @@
+10.50.4.24 - - [16/May/2025:01:37:45 +0300] "POST /1/streams/processing/feedback HTTP/1.1" 200 2435 "-" "cpprestsdk/2.10.18" 150
+10.50.4.24 - - [16/May/2025:01:37:45 +0300] "POST /1/streams/processing/feedback HTTP/1.1" 200 2435 "-" "cpprestsdk/2.10.18" 100
+127.0.0.1 - - [16/May/2025:01:37:45 +0300] "GET /1/license?targets=expiration_time,liveness HTTP/1.1" 200 127 "-" "Python/3.12 aiohttp/3.10.3" 98
+127.0.0.1 - - [16/May/2025:01:37:45 +0300] "GET /1/license?targets=expiration_time,liveness HTTP/1.1" 200 127 "-" "Python/3.12 aiohttp/3.10.3" 205
+127.0.0.1 - - [16/May/2025:01:37:45 +0300] "GET /1/license?targets=expiration_time,liveness HTTP/1.1" 200 127 "-" "Python/3.12 aiohttp/3.10.3" 210
+127.0.0.1 - - [16/May/2025:01:37:45 +0300] "GET /1/license?targets=expiration_time,liveness HTTP/1.1" 200 127 "-" "Python/3.12 aiohttp/3.10.3" 239
+127.0.0.1 - - [16/May/2025:01:37:45 +0300] "GET /1/license?targets=expiration_time,liveness HTTP/1.1" 200 127 "-" "Python/3.12 aiohttp/3.10.3" 99
+127.0.0.1 - - [16/May/2025:01:37:45 +0300] "GET /1/license?targets=expiration_time,liveness HTTP/1.1" 200 127 "-" "Python/3.12 aiohttp/3.10.3" 70
+10.50.4.11 - - [16/May/2025:01:37:45 +0300] "POST /1/puller/luna-sender HTTP/1.1" 200 587 "-" "Python/3.12 aiohttp/3.10.4" 12
+10.50.4.11 - - [16/May/2025:01:37:45 +0300] "POST /1/puller/luna-sender HTTP/1.1" 200 587 "-" "Python/3.12 aiohttp/3.10.4" 213
+10.50.4.11 - - [16/May/2025:01:37:45 +0300] "POST /1/puller/luna-sender HTTP/1.1" 200 587 "-" "Python/3.12 aiohttp/3.10.4" 56
+10.50.4.11 - - [16/May/2025:01:37:45 +0300] "POST /1/puller/luna-sender HTTP/1.1" 200 587 "-" "Python/3.12 aiohttp/3.10.4" 68
+10.50.4.11 - - [16/May/2025:01:37:45 +0300] "POST /1/puller/luna-tasks HTTP/1.1" 200 1329 "-" "Python/3.12 aiohttp/3.10.4" 73
+10.50.4.11 - - [16/May/2025:01:37:45 +0300] "POST /1/puller/luna-tasks HTTP/1.1" 200 1329 "-" "Python/3.12 aiohttp/3.10.4" 104
+10.50.4.11 - - [16/May/2025:01:37:45 +0300] "POST /1/puller/luna-tasks HTTP/1.1" 200 1329 "-" "Python/3.12 aiohttp/3.10.4" 267
+10.50.4.11 - - [16/May/2025:01:37:45 +0300] "POST /1/puller/luna-tasks HTTP/1.1" 200 1329 "-" "Python/3.12 aiohttp/3.10.4" 189
+10.50.4.13 - - [16/May/2025:01:37:45 +0300] "POST /1/estimator HTTP/1.1" 200 112 "-" "Python/3.12 aiohttp/3.10.4" 36
+10.50.4.13 - - [16/May/2025:01:37:45 +0300] "POST /1/estimator HTTP/1.1" 200 112 "-" "Python/3.12 aiohttp/3.10.4" 65
+127.0.0.1 - - [16/May/2025:01:37:45 +0300] "POST /api/v1/monitors/photos HTTP/1.1" 201 4 "-" "Python/3.11 aiohttp/3.9.5" 123
+127.0.0.1 - - [16/May/2025:01:37:45 +0300] "POST /api/v1/monitors/photos HTTP/1.1" 201 4 "-" "Python/3.11 aiohttp/3.9.5" 102
+10.50.4.23 - - [16/May/2025:01:37:45 +0300] "POST /api/v1/index/tasks/receiver/6/handlers/ee4c42b6-23ae-410e-a2aa-a4220e64ba4b/stream_events HTTP/1.1" 201 70 "-" "cpprestsdk/2.10.18" 49
+10.50.4.23 - - [16/May/2025:01:37:45 +0300] "POST /api/v1/index/tasks/receiver/6/handlers/ee4c42b6-23ae-410e-a2aa-a4220e64ba4b/stream_events HTTP/1.1" 201 70 "-" "cpprestsdk/2.10.18" 97
+10.50.4.13 - - [16/May/2025:01:37:46 +0300] "POST /1/puller/luna-python-matcher HTTP/1.1" 200 1099 "-" "Python/3.12 aiohttp/3.10.4" 178
+10.50.4.13 - - [16/May/2025:01:37:46 +0300] "POST /1/puller/luna-python-matcher HTTP/1.1" 200 1099 "-" "Python/3.12 aiohttp/3.10.4" 254
+127.0.0.1 - - [16/May/2025:01:37:46 +0300] "GET /1/license?targets=expiration_time,liveness HTTP/1.1" 200 127 "-" "Python/3.12 aiohttp/3.10.3" 103
+127.0.0.1 - - [16/May/2025:01:37:46 +0300] "GET /1/license?targets=expiration_time,liveness HTTP/1.1" 200 127 "-" "Python/3.12 aiohttp/3.10.3" 200
+10.50.4.11 - - [16/May/2025:01:37:46 +0300] "POST /1/puller/luna-faces HTTP/1.1" 200 899 "-" "Python/3.12 aiohttp/3.10.4" 99
+10.50.4.11 - - [16/May/2025:01:37:46 +0300] "POST /1/puller/luna-faces HTTP/1.1" 200 899 "-" "Python/3.12 aiohttp/3.10.4" 46
+10.50.4.13 - - [16/May/2025:01:37:46 +0300] "POST /1/puller/luna-faces HTTP/1.1" 200 899 "-" "Python/3.12 aiohttp/3.10.4" 78
+10.50.4.13 - - [16/May/2025:01:37:46 +0300] "POST /1/puller/luna-faces HTTP/1.1" 200 899 "-" "Python/3.12 aiohttp/3.10.4" 87
